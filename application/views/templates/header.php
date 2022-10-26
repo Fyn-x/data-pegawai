@@ -15,20 +15,20 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="#">Esbi</a>
+        <a class="navbar-brand" href="<?php echo base_url()  ?>">Esbi</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="<?php echo base_url()  ?>" aria-current="page">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Add</a>
+              <a class="nav-link" href="<?php echo base_url('employee/add')  ?>">Add</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">List</a>
+              <a class="nav-link" href="<?php echo base_url('employee')  ?>">List</a>
             </li>
           </ul>
         </div>

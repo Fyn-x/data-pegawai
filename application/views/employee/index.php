@@ -1,7 +1,7 @@
 <h1 class="text-center mt-5">Daftar Karyawan</h1>
 
 <div class="container">
-  <a href="./welcome/addEmployee" type="button" class="btn btn-primary float-end mb-2">Tambah Karyawan</a>  
+  <a href="<?php echo base_url('employee/add') ?>" type="button" class="btn btn-primary float-end mb-2">Tambah Karyawan</a>  
   <table class="table table-dark table-striped">
     <thead class="text-center">
       <tr>
@@ -16,7 +16,7 @@
     <tbody class="text-center">
       <?php 
         $index = 0;
-        foreach($datas as $row){
+        foreach($employee as $row){
           $index += 1;
       ?>
       <tr>
