@@ -29,8 +29,16 @@
         $this->load->view('templates/footer');
       }else{
         $this->Employee_model->add();
+        $this->session->set_flashdata('flash', 'Ditambahkan');
         redirect('employee');
       }
+    }
+
+    public function delete($nip)
+    {
+      $this->Employee_model->delete($nip);
+      $this->session->set_flashdata('flash', 'Dihapus');
+      redirect('employee');
     }
   }
 

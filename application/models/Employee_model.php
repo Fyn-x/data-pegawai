@@ -16,5 +16,11 @@
 
       $this->db->insert('employees', $data);
     }
+
+    public function delete($nip)
+    {
+      $this->db->where('nip', $nip);
+      $this->db->delete('employees');
+    }
   }
 ?>
