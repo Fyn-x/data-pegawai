@@ -5,6 +5,12 @@
       return $this->db->get('employees')->result();
     }
 
+    public function getDataByNip($nip)
+    {
+      return $this->db->get_where('employees', ['nip'=>$nip])->row();
+      
+    }
+
     public function add()
     {
       $data = [
@@ -21,6 +27,19 @@
     {
       $this->db->where('nip', $nip);
       $this->db->delete('employees');
+    }
+
+    public function edit($nip)
+    {
+      $data = [
+        'nama'=>$this->input->post('nama', true),
+        'email'=>$this->input->post('email', true),
+        'nip'=>$this->input->post('nip', true),
+        'keterangan'=>$this->input->post('keterangan', true),
+      ];
+
+      $this->db->where('nip', $nip);
+      $this->db->update('employees', $data);
     }
   }
 ?>

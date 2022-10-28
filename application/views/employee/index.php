@@ -1,3 +1,4 @@
+
 <h1 class="text-center mt-5">Daftar Karyawan</h1>
 
 <div class="container">
@@ -36,7 +37,7 @@
         <th><?php echo $row->email  ?></th>
         <th><?php echo $row->keterangan  ?></th>
         <td class="d-flex justify-content-around">
-          <a class="btn btn-primary" href="#">Edit</button>
+          <a class="btn btn-primary" href="<?php echo base_url('employee/edit/'.$row->nip) ?>">Edit</button>
           <a class="btn btn-danger" href="<?php echo base_url('employee/delete/'.$row->nip)?>">Delete</a>
         </td>
       </tr>
